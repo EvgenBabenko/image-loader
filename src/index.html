@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./main.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/ractive"></script>
+  <script defer src="./index.js"></script>
+</head>
+
+<body>
+  <div id="target"></div>
+
+  <script id="template" type="text/html">
+    <p>{{greeting}} {{name}}!</p>
+    <button on-click="['handleAddImage']">+</button>
+    <button on-click="['handleRemoveImage']">-</button>
+    <input on-change="handleChangeInput" value={{input}} placeholder="Input image url" />
+    <images images={{images}} />
+  </script>
+
+  <script id="images" type="text/html">
+    <div id="images">
+      {{#each images}}
+        <image image={{this}} index={{@index}} />
+      {{/each}}
+    </div>
+  </script>
+
+  <script id="image" type="text/html">
+    <canvas class={{selected ? 'active' : ''}} id={{image.id}} width="350" height="200" on-click="['handleClickImage', index, @node, image]">
+    </canvas>
+  </script>
+</body>
+
+</html>

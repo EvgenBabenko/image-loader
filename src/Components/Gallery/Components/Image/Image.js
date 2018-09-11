@@ -7,7 +7,6 @@ const Image = Ractive.extend({
   template,
   data: () => ({
     image: {},
-    selected: false,
   }),
 
   onrender: function () {
@@ -18,8 +17,16 @@ const Image = Ractive.extend({
   },
 
   on: {
-    handleClickImage: function (ctx, index) {
+    handleClickImage: function (context, index) {
       this.parent.set('clickedImageIndex', index);
+
+      const activeElement = this.parent.find('.active');
+
+      if (activeElement) {
+        activeElement.classList.remove('active');
+      }
+
+      context.node.classList.add('active');
     },
   },
 });

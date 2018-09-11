@@ -1,2 +1,0 @@
-<canvas id={{image.id}} width="350" height="200" on-click="['handleClickImage', index]">
-</canvas>

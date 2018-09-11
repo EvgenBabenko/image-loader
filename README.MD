@@ -4,7 +4,9 @@
 
 In the project directory:
 
-### `open index.html from ./src`
+### `npm install`
+### `npm start`
+Runs the app in the development mode.
 
 ## Requirements
 

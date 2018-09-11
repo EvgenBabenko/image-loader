@@ -1,0 +1,5 @@
+<div id="images">
+  {{#each images}}
+    <Image image={{this}} index={{@index}} />
+  {{/each}}
+</div>

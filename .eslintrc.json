@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "object-shorthand": ["error", "properties"],
+    "func-names": ["error", "never"]
+  }
+}

@@ -1,0 +1,6 @@
+<p>{{greeting}} {{name}}!</p>
+<button on-click="['handleAddImage']">+</button>
+<button on-click="['handleRemoveImage']">-</button>
+<button on-click="['handleRemoveAllImage']">X</button>
+<input on-change="handleChangeInput" value={{input}} placeholder="Input image url" />
+{{>images images}}
